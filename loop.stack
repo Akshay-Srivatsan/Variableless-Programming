@@ -1,0 +1,36 @@
+#!/usr/bin/env python run.py
+
+0
+{
+    # [fn, num, ...]
+    push
+    # [num, ...]
+    duplicate
+    # [num, num, ...]
+    duplicate
+    # [num, num, num, ...]
+    80
+    # [10, num, num, num, ...]
+    less
+    # [10 < num, num, num, ...]
+    return if
+    # [num, ...]
+    duplicate
+    # [num, num, ...]
+    print
+    # [num, ...]
+    1
+    # [1, num, ...]
+    add
+    # [num + 1, ...]
+    pop
+    # [fn, num + 1, ...]
+    duplicate
+    # [fn, fn, num + 1, ...]
+    call
+    # [...]
+    return
+}
+duplicate
+call
+exit

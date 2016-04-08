@@ -1,0 +1,57 @@
+#!/usr/bin/env python run.py
+{
+    # [this function, number, ...]
+    duplicate
+    push
+    duplicate
+    push
+    swap
+    # [number, function, ...]
+
+    duplicate
+    2
+
+    # [2, number, number, function, ...]
+
+    swap
+    push
+    # [2, number, function, ...]
+    greater
+    1
+    swap
+    return if
+    # [function, ...]
+    pop
+    # [number, function, ...]
+
+    -1
+    add
+
+    # [number-1, function, ...]
+    duplicate
+    -1
+    add
+
+    # [number-2, number-1, function, ...]
+    pop
+    duplicate
+    call
+    # [fib(number-2), number-1, function, ...]
+    pop
+    swap
+    # [fib(number-2), this function, number-1, function, ...]
+    push
+    call
+    pop
+    # [fib(number-2), fib(number-1), function, ...]
+    add
+    swap
+    discard
+    return
+}
+10
+swap
+duplicate
+call
+print
+exit
